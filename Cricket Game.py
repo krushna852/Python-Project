@@ -1,4 +1,13 @@
 import random
+import time
+
+
+def sl(a):
+    i=0
+    while i<a:
+        time.sleep(1)
+        print(end=".")
+        i+=1
 
 
 def innings(a,b,target=500):
@@ -10,7 +19,9 @@ def innings(a,b,target=500):
     runs=[0,1,2,3,4,6,"wicket"]
     while i < 2:
         j=1
+        sl(5)
         while j < 7:
+                sl(2)
                 print(f"{i}.{j}")
                 m=random.choice(runs)
                 if m == "wicket":
@@ -45,14 +56,15 @@ def check(a,b,target,result):
 
 while True:
     user = input("Play or Exit: ")
+    sl(2)
     choice=['bat','bowl']
     toss=['head','tail']
     if user.lower() == 'play':
         print("Welcome To Alpha Cricket NO pain Only Gain...")
         print("Choose Your Team:-")
+        sl(2)
         country=['india','australia','england','finland','pakisthan','afganisthan','west indies','usa','bangladesh','sri lanka','south africa']
         print(country)
-
 
         while True:
             user_c=input()
@@ -64,8 +76,10 @@ while True:
         country.remove(user_c)
         system_c=random.choice(country)
         print("Finding match for you")
+        sl(3)
         print(user_c,'vs',system_c)
         print("Staring The Game...")
+        sl(5)
 
         while True:
             user_choice = input("Enter Head or Tail:- ")
